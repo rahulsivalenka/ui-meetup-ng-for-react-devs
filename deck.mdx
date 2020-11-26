@@ -1,7 +1,10 @@
-import { nightOwl } from '@code-surfer/themes';
+import { oceanicNext } from '@code-surfer/themes';
+import { CodeSurfer } from 'code-surfer';
 import { themes } from 'mdx-deck';
 
 import Head from './components/Head';
+
+import './styles/overrides.css';
 
 export const theme = themes.notes;
 
@@ -16,3 +19,20 @@ export const theme = themes.notes;
 ###### By Phani Rahul Sivalenka
 
 ---
+
+<CodeSurfer theme={oceanicNext}>
+
+```js title="Test" subtitle="Test Subtitle"
+import { Head as MdxHead } from 'mdx-deck';
+import React from 'react';
+
+const Head = ({ title }) => (
+  <MdxHead>
+    <title>{title}</title>
+  </MdxHead>
+);
+
+export default Head;
+```
+
+</CodeSurfer>
