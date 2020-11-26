@@ -1,0 +1,18 @@
+{
+  "name": "react-devs-n-ng-devs",
+  "version": "1.0.0",
+  "description": "UI Meetup - A presentation on Angular For React Devs And Vice Versa",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "pdf": "mdx-deck-export pdf deck.mdx",
+    "build": "mdx-deck build deck.mdx"
+  },
+  "keywords": [],
+  "author": "Phani Rahul Sivalenka",
+  "license": "ISC",
+  "devDependencies": {
+    "@code-surfer/themes": "^3.1.1",
+    "code-surfer": "^3.1.1",
+    "mdx-deck": "^3.1.0"
+  }
+}
