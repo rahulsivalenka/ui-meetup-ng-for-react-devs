@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "UI Meetup - A presentation on Angular For React Devs And Vice Versa",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
-    "pdf": "mdx-deck-export pdf deck.mdx",
-    "build": "mdx-deck build deck.mdx"
+    "start": "mdx-deck slides/deck.mdx",
+    "build": "mdx-deck build slides/deck.mdx"
   },
   "keywords": [],
   "author": "Phani Rahul Sivalenka",
