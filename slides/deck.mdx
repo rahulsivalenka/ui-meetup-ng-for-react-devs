@@ -1,10 +1,17 @@
-import { oceanicNext } from '@code-surfer/themes';
-import { CodeSurfer } from 'code-surfer';
-import { themes } from 'mdx-deck';
+import { nightOwl, github, oceanicNext, vsDark } from '@code-surfer/themes';
+import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
+import { themes, Appear } from 'mdx-deck';
 
 import Head from './components/Head';
+import ComparisonColumn from './components/ComparisonColumn';
+import ImageStack from './components/ImageStack';
 
 import './styles/overrides.css';
+
+import ngStructure from './images/ng-structure.png';
+import ngStyleGuide from './images/ng-style-guide.png';
+import reactStyleGuide from './images/react-style-guide-1.png';
+import reactStyleGuide2 from './images/react-style-guide-2.png';
 
 export const theme = themes.notes;
 
@@ -20,19 +27,203 @@ export const theme = themes.notes;
 
 ---
 
-<CodeSurfer theme={oceanicNext}>
+<CodeSurferColumns>
 
-```jsx title="Test" subtitle="Test Subtitle"
-import { Head as MdxHead } from 'mdx-deck';
-import React from 'react';
+<Step title="Style Guide">
 
-const Head = ({ title }) => (
-  <MdxHead>
-    <title>{title}</title>
-  </MdxHead>
-);
+<ComparisonColumn text={() => (
+<>
 
-export default Head;
+N/A. Flexible.
+
+https://freefrontend.com/react-style-guides/
+
+</>
+)}>
+
+<ImageStack
+  images={[
+    { src: reactStyleGuide2, alt: 'CSS Tricks React Style Guide' },
+    { src: reactStyleGuide, alt: 'Airbnb React Style Guide' },
+  ]}
+/>
+
+</ComparisonColumn>
+
+<ComparisonColumn fw="ng" text={() => (
+<>
+
+Has a guide which is developed by John Papa and officially adopted by Angular team.
+
+https://angular.io/guide/styleguide
+
+</>
+)}>
+  
+<ImageStack
+  images={[
+    { src: ngStyleGuide, alt: 'Angular Style Guide', height: 'auto' },
+    {/* { src: ngStructure, alt: 'Angular Opinionated Folder Structure' }, */}
+  ]}
+/>
+
+</ComparisonColumn>
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurfer theme={nightOwl}>
+
+```js 1:5 subtitle="First function"
+function lorem(ipsum, dolor = 1) {
+  const sit = ipsum == null ? 0 : ipsum.sit;
+  dolor = sit - amet(dolor);
+  return sit ? consectetur(ipsum, 0, dolor < 0 ? 0 : dolor) : [];
+}
+
+function incididunt(ipsum, ut = 1) {
+  ut = labore.et(amet(ut), 0);
+  const sit = ipsum == null ? 0 : ipsum.sit;
+
+  if (!sit || ut < 1) {
+    return [];
+  }
+
+  let dolore = 0;
+  let magna = 0;
+  const aliqua = new eiusmod(labore.ut(sit / ut));
+
+  while (dolore < sit) {
+    aliqua[magna++] = consectetur(ipsum, dolore, (dolore += ut));
+  }
+
+  return aliqua;
+}
+```
+
+```js subtitle="Second function"
+function lorem(ipsum, dolor = 1) {
+  const sit = ipsum == null ? 0 : ipsum.sit;
+  dolor = sit - amet(dolor);
+  return sit ? consectetur(ipsum, 0, dolor < 0 ? 0 : dolor) : [];
+}
+
+function adipiscing(...elit) {
+  if (!elit.sit) {
+    return [];
+  }
+
+  const sed = elit[0];
+  return eiusmod.tempor(sed) ? sed : [sed];
+}
+
+function incididunt(ipsum, ut = 1) {
+  ut = labore.et(amet(ut), 0);
+  const sit = ipsum == null ? 0 : ipsum.sit;
+
+  if (!sit || ut < 1) {
+    return [];
+  }
+
+  let dolore = 0;
+  let magna = 0;
+  const aliqua = new eiusmod(labore.ut(sit / ut));
+
+  while (dolore < sit) {
+    aliqua[magna++] = consectetur(ipsum, dolore, (dolore += ut));
+  }
+
+  return aliqua;
+}
+```
+
+```diff 16:33  subtitle="Third function"
+
+```
+
+```diff subtitle="All functions"
+
+```
+
+```diff 7[10:19] subtitle="Adipiscing?"
+
 ```
 
 </CodeSurfer>
+
+---
+
+<CodeSurferColumns themes={[oceanicNext, github, nightOwl]}>
+
+<Step>
+
+```jsx title="Function"
+function Counter() {
+  const count = 1;
+  return (
+    <div>
+      <button>Less</button>
+      <h1>{count}</h1>
+      <button>More</button>
+    </div>
+  );
+}
+```
+
+```jsx title="Function"
+function Counter() {
+  const count = 1;
+  return (
+    <div>
+      <button>Less</button>
+      <h1>{count}</h1>
+      <button>More</button>
+    </div>
+  );
+}
+```
+
+</Step>
+
+<Step>
+
+```jsx title="Class"
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 1,
+    };
+  }
+  render() {
+    const { count } = this.state;
+    return (
+      <div>
+        <button onClick={_ => this.setState(c => c - 1)}>Less</button>
+        <h1>{count}</h1>
+        <button onClick={_ => this.setState(c => c + 1)}>More</button>
+      </div>
+    );
+  }
+}
+```
+
+```jsx title="Function"
+function Counter() {
+  const [count, setCount] = useState(1);
+  return (
+    <div>
+      <button onClick={_ => setCount(c => c - 1)}>Less</button>
+      <h1>{count}</h1>
+      <button onClick={_ => setCount(c => c + 1)}>More</button>
+    </div>
+  );
+}
+```
+
+</Step>
+
+</CodeSurferColumns>

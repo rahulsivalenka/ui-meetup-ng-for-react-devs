@@ -10,8 +10,8 @@
   "author": "Phani Rahul Sivalenka",
   "license": "ISC",
   "devDependencies": {
-    "@code-surfer/themes": "^3.1.1",
-    "code-surfer": "^3.1.1",
-    "mdx-deck": "^3.1.0"
+    "@code-surfer/themes": "3.1.1",
+    "code-surfer": "3.1.1",
+    "mdx-deck": "3.0.10"
   }
 }
