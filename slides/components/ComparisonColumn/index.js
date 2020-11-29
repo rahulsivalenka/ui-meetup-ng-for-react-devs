@@ -1,15 +1,10 @@
 import React from 'react';
 import { StylesProvider } from '@code-surfer/themes';
-import { nightOwl, github, oceanicNext, vsDark } from '@code-surfer/themes';
 import styles from './ComparisonColumn.module.css';
+import { getTheme } from '../helper';
 
-const ComparisonColumn = ({
-  fw: framework = 'react',
-  children,
-  text: Text,
-}) => {
-  const theme = framework === 'react' ? oceanicNext : nightOwl;
-  console.log(theme);
+const ComparisonColumn = ({ fw, children, text: Text }) => {
+  const theme = getTheme(fw);
   return (
     <StylesProvider theme={theme}>
       <div

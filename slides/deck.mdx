@@ -5,6 +5,8 @@ import { themes, Appear } from 'mdx-deck';
 import Head from './components/Head';
 import ComparisonColumn from './components/ComparisonColumn';
 import ImageStack from './components/ImageStack';
+import FwCodeSurferColumns from './components/FwCodeSurferColumns';
+import { COLUMN_THEMES } from './components/constants';
 
 import './styles/overrides.css';
 
@@ -24,6 +26,8 @@ export const theme = themes.notes;
 #### UI Meetup - 30th Nov 2020
 
 ###### By Phani Rahul Sivalenka
+
+---
 
 ---
 
@@ -62,12 +66,54 @@ https://angular.io/guide/styleguide
   
 <ImageStack
   images={[
+    { src: ngStructure, alt: 'Angular Opinionated Folder Structure' },
     { src: ngStyleGuide, alt: 'Angular Style Guide', height: 'auto' },
-    {/* { src: ngStructure, alt: 'Angular Opinionated Folder Structure' }, */}
   ]}
 />
 
 </ComparisonColumn>
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Contruction">
+
+```jsx 3:5 subtitle="function itself acts as a constructor" file=./samples/react/MyCompConstructorOnly.js
+
+```
+
+```ts 36 subtitle="contructor" file=./samples/ng/my-comp/my-comp.component.ts
+
+```
+
+</Step>
+
+<Step title="Life Cycle Hook: Initialization">
+
+```jsx 7:14 subtitle="'useEffect' hook with an empty array of dependencies" file=./samples/react/MyComp/MyComp.js
+
+```
+
+```diff 40:43 subtitle="Implementing 'OnInit' interface should allow us to hook into init"
+
+```
+
+</Step>
+
+<Step title="Life Cycle Hook: Initialization">
+
+```diff 7:14 subtitle="'useEffect' hook with an empty array of dependencies"
+
+```
+
+```diff 27:30  subtitle="AfterViewInit is called "
+
+```
 
 </Step>
 
