@@ -33,6 +33,8 @@ export class MyCompComponent
 
   @Output() nameChange = new EventEmitter<string>();
 
+  count: number = 0;
+
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges): void {}
@@ -69,5 +71,9 @@ export class MyCompComponent
   onNameChangeClick() {
     const newName = getRandomName();
     this.nameChange.emit(newName);
+  }
+
+  increment() {
+    this.count = this.count + 1;
   }
 }

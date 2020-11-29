@@ -30,10 +30,19 @@ const MyComp = ({ name, onNameChange }) => {
     onNameChange(newName);
   };
 
+  const increment = () => {
+    // Using the closure 'count' variable
+    setCount(count + 1);
+    // or by passing a callback
+    // which gets latest value of count 'c'
+    // setCount(c => c + 1);
+  };
+
   return (
     <div>
       MyComp {name}
       <button onClick={onChangeNameClick}>Change Name</button>
+      {count}
     </div>
   );
 };

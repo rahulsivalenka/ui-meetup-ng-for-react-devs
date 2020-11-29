@@ -144,7 +144,7 @@ export const theme = themes.notes;
 
 # BASICS
 
-## Component Communication
+## Basic Component Communication
 
 ---
 
@@ -235,7 +235,7 @@ export const theme = themes.notes;
 
 ```
 
-```ts 71 subtitle="use 'emit' method on EventEmitter to raise the event" file=./samples/ng/my-comp/my-comp.component.ts
+```ts 73 subtitle="use 'emit' method on EventEmitter to raise the event" file=./samples/ng/my-comp/my-comp.component.ts
 
 ```
 
@@ -255,6 +255,42 @@ export const theme = themes.notes;
 <my-comp [name]="'Batman'" (nameChange)="handleNameChange($event)"
   ><my-comp></my-comp
 ></my-comp>
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# BASICS
+
+## Component State
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Component State">
+
+```jsx 4 subtitle="define it using a special 'useState' hook which gives the current value of state (count) and a setter function (setCount)" file=./samples/react/MyComp/MyComp.js
+
+```
+
+```ts 36 subtitle="define it as plain member of the class" file=./samples/ng/my-comp/my-comp.component.ts
+
+```
+
+</Step>
+
+<Step title="Component State: Changing the state">
+
+```jsx 34:38 subtitle="call the setter function that is destructured out of useState call" file=./samples/react/MyComp/MyComp.js
+
+```
+
+```ts 77 subtitle="use simple assignment" file=./samples/ng/my-comp/my-comp.component.ts
+
 ```
 
 </Step>
