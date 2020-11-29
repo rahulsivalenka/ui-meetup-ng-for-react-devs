@@ -86,7 +86,7 @@ export const theme = themes.notes;
 
 <Step>
 
-```jsx 2 subtitle="import an external CSS file" file=./samples/react/MyComp.js
+```jsx 2 subtitle="import an external CSS file (this is leaking)" file=./samples/react/MyComp.js
 
 ```
 
@@ -114,14 +114,26 @@ export const theme = themes.notes;
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
-<Step title="Component Communication: Inputs">
+<Step title="Usage">
 
-```jsx 3:4,8[42:46] subtitle="in TypeScript prop types are defined as interfaces separately" file=./samples/react/MyComp/MyComp.tsx
+```jsx 4[7:13] subtitle="use the component name as element. (should be in PascalCase)" file=./samples/react/MyComp.js
 
 ```
 
-```ts 32 subtitle="use '@Input()' decorator for inputs" file=./samples/ng/my-comp/my-comp.component.ts
+```ts 4[14:21] subtitle="use the selector as element" file=./samples/ng/inner-comp/inner-comp.component.ts
 
+```
+
+</Step>
+
+<Step title="Usage">
+
+```jsx subtitle="use the component name as element. (should be in PascalCase)"
+<MyComp />
+```
+
+```ts subtitle="use the selector as element"
+<my-comp></my-comp>
 ```
 
 </Step>
@@ -150,13 +162,43 @@ export const theme = themes.notes;
 
 </Step>
 
-<Step title="Component Communication: Inputs">
+<Step title="Inputs">
 
 ```jsx 3:4,8[42:46] subtitle="in TypeScript prop types are defined as interfaces separately" file=./samples/react/MyComp/MyComp.tsx
 
 ```
 
 ```ts 32 subtitle="use '@Input()' decorator for inputs" file=./samples/ng/my-comp/my-comp.component.ts
+
+```
+
+</Step>
+
+<Step title="Inputs">
+
+```diff 8[15:36] subtitle="and use that type in the component"
+
+```
+
+```ts 32 subtitle="use '@Input()' decorator for inputs" file=./samples/ng/my-comp/my-comp.component.ts
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Outputs">
+
+```jsx 3[25:37] subtitle="use 'prop functions' for outputs" file=./samples/react/MyComp/MyComp.js
+
+```
+
+```ts 34 subtitle="use '@Output()' decorator for outputs" file=./samples/ng/my-comp/my-comp.component.ts
 
 ```
 
@@ -403,6 +445,30 @@ function Counter() {
     </div>
   );
 }
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# BASICS
+
+## Component Communication
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Inputs">
+
+```jsx 3:4,8[42:46] subtitle="in TypeScript prop types are defined as interfaces separately" file=./samples/react/MyComp/MyComp.tsx
+
+```
+
+```ts 32 subtitle="use '@Input()' decorator for inputs" file=./samples/ng/my-comp/my-comp.component.ts
+
 ```
 
 </Step>
