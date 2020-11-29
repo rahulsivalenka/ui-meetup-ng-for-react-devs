@@ -78,19 +78,71 @@ export const theme = themes.notes;
 
 # BASICS
 
+## How to use the component defined?
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Usage">
+
+```jsx 4[7:13] subtitle="use the component name as element. (should be in PascalCase)" file=./samples/react/MyComp.js
+
+```
+
+```ts 4[14:21] subtitle="use the selector as element" file=./samples/ng/inner-comp/inner-comp.component.ts
+
+```
+
+</Step>
+
+<Step title="Usage">
+
+```jsx subtitle="use the component name as element. (should be in PascalCase)"
+<MyComp />;
+{
+  /* or */
+}
+<MyComp></MyComp>;
+```
+
+```html subtitle="use the selector as element (close tag cannot be self closing)"
+<my-comp></my-comp>
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# BASICS
+
 ## How to style?
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
-<Step>
+<Step title="Styling">
 
-```jsx 2 subtitle="import an external CSS file (this is leaking)" file=./samples/react/MyComp.js
+```jsx 2 subtitle="import an external CSS file (styles leak here)" file=./samples/react/MyComp.js
 
 ```
 
-```ts 6 subtitle="link to an external CSS file" file=./samples/ng/inner-comp/inner-comp.component.ts
+```ts 6 subtitle="link to an external CSS file (by default non-leaking)" file=./samples/ng/inner-comp/inner-comp.component.ts
+
+```
+
+</Step>
+
+<Step title="Styling">
+
+```jsx 2 subtitle="import an external CSS file (styles leak here)" file=./samples/react/MyComp.js
+
+```
+
+```ts 1[29:46],7 subtitle="to make Angular leak styles, we can set view encapsulation to 'None'" file=./samples/ng/inner-comp-leaking/inner-comp.component.ts
 
 ```
 
@@ -112,39 +164,9 @@ export const theme = themes.notes;
 
 ---
 
-<CodeSurferColumns themes={COLUMN_THEMES}>
-
-<Step title="Usage">
-
-```jsx 4[7:13] subtitle="use the component name as element. (should be in PascalCase)" file=./samples/react/MyComp.js
-
-```
-
-```ts 4[14:21] subtitle="use the selector as element" file=./samples/ng/inner-comp/inner-comp.component.ts
-
-```
-
-</Step>
-
-<Step title="Usage">
-
-```jsx subtitle="use the component name as element. (should be in PascalCase)"
-<MyComp />
-```
-
-```html subtitle="use the selector as element"
-<my-comp></my-comp>
-```
-
-</Step>
-
-</CodeSurferColumns>
-
----
-
 # BASICS
 
-## Basic Component Communication
+## How to communicate between components?
 
 ---
 
@@ -188,7 +210,7 @@ export const theme = themes.notes;
 
 <Step title="Inputs: Binding">
 
-```jsx 35[14:20] subtitle="bind in JSX using curly braces ({...})" file=./samples/react/MyComp/MyComp.js
+```jsx 43[14:20] subtitle="bind in JSX using curly braces ({...})" file=./samples/react/MyComp/MyComp.js
 
 ```
 
