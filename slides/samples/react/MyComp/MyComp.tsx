@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-const MyComp = ({ name, onNameChange }) => {
+interface MyCompProps {
+  name: string;
+  onNameChange: () => void;
+}
+
+const MyComp: React.FC<MyCompProps> = ({ name, onNameChange }) => {
   const [count, setCount] = useState(0);
 
   // init

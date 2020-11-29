@@ -5,7 +5,6 @@ import { themes, Appear } from 'mdx-deck';
 import Head from './components/Head';
 import ComparisonColumn from './components/ComparisonColumn';
 import ImageStack from './components/ImageStack';
-import FwCodeSurferColumns from './components/FwCodeSurferColumns';
 import { COLUMN_THEMES } from './components/constants';
 
 import './styles/overrides.css';
@@ -28,6 +27,142 @@ export const theme = themes.notes;
 ###### By Phani Rahul Sivalenka
 
 ---
+
+# BASICS
+
+## How to define a component?
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step>
+
+```jsx 4:11 subtitle="define it as a function" file=./samples/react/MyComp.js
+
+```
+
+```ts 3:15 subtitle="define it as a class decorated with '@Component()' decorator" file=./samples/ng/inner-comp/inner-comp.component.ts
+
+```
+
+</Step>
+
+<Step>
+
+```diff 5:9 subtitle="template lives inside the component definition and cannot be externalized"
+
+```
+
+```diff 5 subtitle="template can be an external html file (preferred)"
+
+```
+
+</Step>
+
+<Step>
+
+```diff 5:9 subtitle="template lives inside the component definition and cannot be externalized"
+
+```
+
+```file 5:10 subtitle="template can be in the same file"  file=./samples/ng/my-inline-comp/my-inline-comp.component.ts
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# BASICS
+
+## How to style?
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step>
+
+```jsx 2 subtitle="import an external CSS file" file=./samples/react/MyComp.js
+
+```
+
+```ts 6 subtitle="link to an external CSS file" file=./samples/ng/inner-comp/inner-comp.component.ts
+
+```
+
+</Step>
+
+<Step>
+
+```jsx 6:8 subtitle="define inline using CSS-in-JS" file=./samples/react/MyCompInline.js
+
+```
+
+```ts 11:17 subtitle="define in the same file" file=./samples/ng/my-inline-comp/my-inline-comp.component.ts
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Component Communication: Inputs">
+
+```jsx 3:4,8[42:46] subtitle="in TypeScript prop types are defined as interfaces separately" file=./samples/react/MyComp/MyComp.tsx
+
+```
+
+```ts 32 subtitle="use '@Input()' decorator for inputs" file=./samples/ng/my-comp/my-comp.component.ts
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# BASICS
+
+## Component Communication
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Inputs">
+
+```jsx 3[19:23] subtitle="use 'props' for inputs" file=./samples/react/MyComp/MyComp.js
+
+```
+
+```ts 32 subtitle="use '@Input()' decorator for inputs" file=./samples/ng/my-comp/my-comp.component.ts
+
+```
+
+</Step>
+
+<Step title="Component Communication: Inputs">
+
+```jsx 3:4,8[42:46] subtitle="in TypeScript prop types are defined as interfaces separately" file=./samples/react/MyComp/MyComp.tsx
+
+```
+
+```ts 32 subtitle="use '@Input()' decorator for inputs" file=./samples/ng/my-comp/my-comp.component.ts
+
+```
+
+</Step>
+
+</CodeSurferColumns>
 
 ---
 
@@ -63,7 +198,7 @@ https://angular.io/guide/styleguide
 
 </>
 )}>
-  
+
 <ImageStack
   images={[
     { src: ngStructure, alt: 'Angular Opinionated Folder Structure' },
