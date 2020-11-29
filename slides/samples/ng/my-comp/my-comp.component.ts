@@ -65,4 +65,9 @@ export class MyCompComponent
   ngOnDestroy(): void {
     // Code here
   }
+
+  onNameChangeClick() {
+    const newName = getRandomName();
+    this.nameChange.emit(newName);
+  }
 }

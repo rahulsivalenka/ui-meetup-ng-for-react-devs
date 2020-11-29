@@ -25,7 +25,17 @@ const MyComp = ({ name, onNameChange }) => {
     // name or count
   }, [name, count]);
 
-  return <div>MyComp</div>;
+  const onChangeNameClick = () => {
+    const newName = getRandomName();
+    onNameChange(newName);
+  };
+
+  return (
+    <div>
+      MyComp {name}
+      <button onClick={onChangeNameClick}>Change Name</button>
+    </div>
+  );
 };
 
 export default MyComp;

@@ -132,7 +132,7 @@ export const theme = themes.notes;
 <MyComp />
 ```
 
-```ts subtitle="use the selector as element"
+```html subtitle="use the selector as element"
 <my-comp></my-comp>
 ```
 
@@ -186,6 +186,31 @@ export const theme = themes.notes;
 
 </Step>
 
+<Step title="Inputs: Binding">
+
+```jsx 35[14:20] subtitle="bind in JSX using curly braces ({...})" file=./samples/react/MyComp/MyComp.js
+
+```
+
+```ts 2[27:35] subtitle="bind in the html using double curly braces ({{...}})" file=./samples/ng/my-comp/my-comp.component.html
+
+```
+
+</Step>
+
+<Step title="Inputs: Usage">
+
+```jsx 1[9:24] subtitle="'Batman' string value is assigned to 'name' prop using curly braces ({})"
+<MyComp name={'Batman'} />
+```
+
+```html 2[10:27] subtitle="'Batman' string value is assigned to 'name' input using property binding (square brackets; [])."
+<!-- Property binding -->
+<my-comp [name]="'Batman'"></my-comp>
+```
+
+</Step>
+
 </CodeSurferColumns>
 
 ---
@@ -200,6 +225,36 @@ export const theme = themes.notes;
 
 ```ts 34 subtitle="use '@Output()' decorator for outputs" file=./samples/ng/my-comp/my-comp.component.ts
 
+```
+
+</Step>
+
+<Step title="Outputs: Raising the event">
+
+```jsx 30 subtitle="call it as any other JS function call" file=./samples/react/MyComp/MyComp.js
+
+```
+
+```ts 71 subtitle="use 'emit' method on EventEmitter to raise the event" file=./samples/ng/my-comp/my-comp.component.ts
+
+```
+
+</Step>
+
+<Step title="Outputs: Usage">
+
+```jsx 3
+<MyComp
+  name={'Batman'}
+  onNameChange={e => console.log('name has changed', e)}
+/>
+```
+
+```html 2[28:67]
+<!-- Event Binding -->
+<my-comp [name]="'Batman'" (nameChange)="handleNameChange($event)"
+  ><my-comp></my-comp
+></my-comp>
 ```
 
 </Step>
