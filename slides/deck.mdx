@@ -321,4 +321,138 @@ export const theme = themes.notes;
 
 ---
 
+### What if our components do not have a 'parent-child' relationship?
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Communication Between Unrelated Components">
+
+<div>
+
+## React Context
+
+</div>
+
+<div>
+
+## Angular Services
+
+</div>
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Communication Between Unrelated Components">
+
+```jsx subtitle="define the context" file=./samples/react/CartProvider.js
+
+```
+
+```ts subtitle="define the service" file=./samples/ng/cart.service.ts
+
+```
+
+</Step>
+
+<Step title="Communication Between Unrelated Components">
+
+```diff subtitle="there are three parts to a context definition"
+
+```
+
+```ts subtitle="define the service" file=./samples/ng/cart.service.ts
+
+```
+
+</Step>
+
+<Step title="Communication Between Unrelated Components">
+
+```diff 3 subtitle="1. create the context"
+
+```
+
+```ts subtitle="define the service" file=./samples/ng/cart.service.ts
+
+```
+
+</Step>
+
+<Step title="Communication Between Unrelated Components">
+
+```diff 5:15 subtitle="2. create the corresponding provider"
+
+```
+
+```ts subtitle="define the service" file=./samples/ng/cart.service.ts
+
+```
+
+</Step>
+
+<Step title="Communication Between Unrelated Components">
+
+```diff 17 subtitle="3. expose a custom hook to be used to access the values in the context"
+
+```
+
+```ts subtitle="define the service" file=./samples/ng/cart.service.ts
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Usage">
+
+```jsx 6:8 subtitle="provide the context in the root or in any other component" file=./samples/react/UsingContext.js
+
+```
+
+```ts 10 subtitle="provide the service in root module or any sub modules" file=./samples/ng/using-service.module.ts
+
+```
+
+</Step>
+
+<Step title="Usage">
+
+```diff 13 subtitle="access context using the custom hook exposed"
+
+```
+
+```ts 14 subtitle="inject the service in the constructor wherever needed" file=./samples/ng/app.component.ts
+
+```
+
+</Step>
+
+<Step title="Usage">
+
+```diff 15 subtitle="use the members in context"
+
+```
+
+```diff 8 subtitle="use the members in service"
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
 # Thank You
