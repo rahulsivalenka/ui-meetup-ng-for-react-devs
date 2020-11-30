@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div>
       <h1>My Angular Inline Template</h1>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <p style="color: blue;">Lorem ipsum dolor sit amet.</p>
     </div>
   `,
   styles: [

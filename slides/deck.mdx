@@ -20,7 +20,7 @@ export const theme = themes.notes;
 
 <!-- Slides Start -->
 
-# Angular for React Devs and Vice Versa
+# Angular for React Devs and Vice Versa (Part 1)
 
 #### UI Meetup - 30th Nov 2020
 
@@ -69,6 +69,30 @@ export const theme = themes.notes;
 ```file 5:10 subtitle="template can be in the same file"  file=./samples/ng/my-inline-comp/my-inline-comp.component.ts
 
 ```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Syntax">
+
+<ComparisonColumn>
+
+- Language : JavaScript / [TypeScript](https://www.typescriptlang.org/)
+- Template Syntax : [JSX](https://reactjs.org/docs/introducing-jsx.html)
+
+</ComparisonColumn>
+
+<ComparisonColumn fw="ng">
+
+- Language : [TypeScript](https://www.typescriptlang.org/)
+- Template Syntax : [Extended HTML](https://angular.io/guide/template-syntax)
+
+</ComparisonColumn>
 
 </Step>
 
@@ -154,9 +178,37 @@ export const theme = themes.notes;
 
 ```
 
-```ts 11:17 subtitle="define in the same file" file=./samples/ng/my-inline-comp/my-inline-comp.component.ts
+```ts 8[10:30],11:17 subtitle="define in the same file or inline" file=./samples/ng/my-inline-comp/my-inline-comp.component.ts
 
 ```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Styling: More Options">
+
+<ComparisonColumn>
+
+- [CSS Modules (available in Create React App (CRA) by default)](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
+- [Styled Components](https://styled-components.com/)
+- [Material UI Styling](https://material-ui.com/styles/basics/)
+- Can also be setup to use any kind of CSS pre-processor
+
+</ComparisonColumn>
+
+<ComparisonColumn fw="ng">
+
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [SCSS/SASS](https://sass-lang.com/)
+- [Less](http://lesscss.org/)
+- [Stylus](https://stylus-lang.com/)
+
+</ComparisonColumn>
 
 </Step>
 
@@ -329,17 +381,17 @@ export const theme = themes.notes;
 
 <Step title="Communication Between Unrelated Components">
 
-<div>
+<ComparisonColumn>
 
 ## React Context
 
-</div>
+</ComparisonColumn>
 
-<div>
+<ComparisonColumn fw="ng">
 
 ## Angular Services
 
-</div>
+</ComparisonColumn>
 
 </Step>
 
@@ -415,19 +467,19 @@ export const theme = themes.notes;
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
-<Step title="Usage">
+<Step title="Usage: Provide It">
 
 ```jsx 6:8 subtitle="provide the context in the root or in any other component" file=./samples/react/UsingContext.js
 
 ```
 
-```ts 10 subtitle="provide the service in root module or any sub modules" file=./samples/ng/using-service.module.ts
+```ts 10 subtitle="provide the service in root module or any sub modules or in a component (@Component() decorator's 'providers' property)" file=./samples/ng/using-service.module.ts
 
 ```
 
 </Step>
 
-<Step title="Usage">
+<Step title="Usage: Inject It">
 
 ```diff 13 subtitle="access context using the custom hook exposed"
 
@@ -439,7 +491,7 @@ export const theme = themes.notes;
 
 </Step>
 
-<Step title="Usage">
+<Step title="Usage: Use It">
 
 ```diff 15 subtitle="use the members in context"
 
@@ -452,6 +504,20 @@ export const theme = themes.notes;
 </Step>
 
 </CodeSurferColumns>
+
+---
+
+<div style={{ padding: '15%', width: '100%' }}>
+
+|        Next Up        |
+| :-------------------: | :-----------: |
+| Component Composition |     Form      |
+|    Lifecycle Hooks    | HTTP Requests |
+|        Modules        |   Ecosystem   |
+|     Lazy Loading      |
+|        Routing        |
+
+</div>
 
 ---
 
