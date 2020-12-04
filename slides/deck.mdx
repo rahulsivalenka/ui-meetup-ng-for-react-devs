@@ -1,18 +1,17 @@
-import { nightOwl, github, oceanicNext, vsDark } from '@code-surfer/themes';
+import { github, nightOwl, oceanicNext, vsDark } from '@code-surfer/themes';
 import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
-import { themes, Appear } from 'mdx-deck';
+import { Appear, themes } from 'mdx-deck';
 
-import Head from './components/Head';
 import ComparisonColumn from './components/ComparisonColumn';
-import ImageStack from './components/ImageStack';
 import { COLUMN_THEMES } from './components/constants';
-
-import './styles/overrides.css';
-
+import Head from './components/Head';
+import ImageStack from './components/ImageStack';
 import ngStructure from './images/ng-structure.png';
 import ngStyleGuide from './images/ng-style-guide.png';
 import reactStyleGuide from './images/react-style-guide-1.png';
 import reactStyleGuide2 from './images/react-style-guide-2.png';
+
+import './styles/overrides.css';
 
 export const theme = themes.notes;
 
@@ -226,7 +225,31 @@ export const theme = themes.notes;
 
 <Step title="Inputs">
 
-```jsx 3[19:23] subtitle="use 'props' for inputs" file=./samples/react/MyComp/MyComp.js
+```jsx 3[16:21],4[11:15] subtitle="use 'props' for inputs" file=./samples/react/MyCompWithoutPropsDestructuring.js
+
+```
+
+```ts 32 subtitle="use '@Input()' decorator for inputs" file=./samples/ng/my-comp/my-comp.component.ts
+
+```
+
+</Step>
+
+<Step title="Inputs">
+
+```diff 4 subtitle="note that 'props' here is an object from which we are extracting our inputs"
+
+```
+
+```ts 32 subtitle="use '@Input()' decorator for inputs" file=./samples/ng/my-comp/my-comp.component.ts
+
+```
+
+</Step>
+
+<Step title="Inputs">
+
+```jsx 3[19:23] subtitle="can also be direclty destructured" file=./samples/react/MyComp/MyComp.js
 
 ```
 
