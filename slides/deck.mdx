@@ -4,12 +4,15 @@ import { Appear, themes } from 'mdx-deck';
 
 import ComparisonColumn from './components/ComparisonColumn';
 import { COLUMN_THEMES } from './components/constants';
+import { getTheme } from './components/helper';
 import Head from './components/Head';
 import ImageStack from './components/ImageStack';
 import ngStructure from './images/ng-structure.png';
 import ngStyleGuide from './images/ng-style-guide.png';
 import reactStyleGuide from './images/react-style-guide-1.png';
 import reactStyleGuide2 from './images/react-style-guide-2.png';
+
+import BasicDogsList from './samples/react/List/BasicDogsList';
 
 import './styles/overrides.css';
 import './styles/styles.css';
@@ -553,8 +556,8 @@ By Phani Rahul Sivalenka
 | Component Composition |     Form      |
 |    Lifecycle Hooks    | HTTP Requests |
 |        Modules        |   Ecosystem   |
-|     Lazy Loading      |
 |        Routing        |
+|     Lazy Loading      |
 
 </div>
 
@@ -571,3 +574,139 @@ By Phani Rahul Sivalenka
 ## Component Composition
 
 ---
+
+<CodeSurferColumns>
+
+<Step>
+
+<BasicDogsList />
+
+</Step>
+
+<Step subtitle="How do we build this?">
+
+<BasicDogsList />
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step subtitle="One way is to define all in one component">
+
+```jsx file=./samples/react/List/BasicDogsList.js
+
+```
+
+```html file=./samples/ng/list/basic-dogs-list.component.html
+
+```
+
+</Step>
+
+<Step subtitle="Notice the repetitions">
+
+```diff 7:15
+
+```
+
+```diff 2:8
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Extract dogs into an array">
+
+```jsx 5:18 subtitle="define dogs constant in the component function" file=./samples/react/List/BasicDogsListUsingFor.js
+
+```
+
+```ts 9:22 subtitle="define dogs property on the component class" file=./samples/ng/list/basic-dogs-list-using-for.component.ts
+
+```
+
+</Step>
+
+<Step title="Simplify the code using loop">
+
+```jsx 22:34 subtitle="Using Array.prototype.map() function" file=./samples/react/List/BasicDogsListUsingFor.js
+
+```
+
+```html 2:8 subtitle="Using ngFor structural directive" file=./samples/ng/list/basic-dogs-list-using-for.component.html
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Don't miss the key in React">
+
+```jsx 24[41:55] subtitle="notice the key prop"  file=./samples/react/List/BasicDogsListUsingFor.js
+
+```
+
+```html 2:8 subtitle="No key needed here" file=./samples/ng/list/basic-dogs-list-using-for.component.html
+
+```
+
+</Step>
+
+<Step title="Don't miss the key in React">
+
+```jsx 24[41:55] subtitle="Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity. Refer: https://reactjs.org/docs/lists-and-keys.html"  file=./samples/react/List/BasicDogsListUsingFor.js
+
+```
+
+```html 2:8 subtitle="No key needed here" file=./samples/ng/list/basic-dogs-list-using-for.component.html
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Can do in Angular too">
+
+```jsx 24[41:55] file=./samples/react/List/BasicDogsListUsingFor.js
+
+```
+
+```ts 24:26 subtitle="to minimize churn in the DOM, we can define a trackBy function to achieve the same" file=./samples/ng/list/basic-dogs-list-using-for-trackby.component.ts
+
+```
+
+</Step>
+
+<Step title="Can do in Angular too">
+
+```jsx 24[41:55] file=./samples/react/List/BasicDogsListUsingFor.js
+
+```
+
+```ts 2[44:68] subtitle="use trackBy in template" file=./samples/ng/list/basic-dogs-list-using-for-trackby.component.html
+
+```
+
+</Step>
+
+</CodeSurferColumns>

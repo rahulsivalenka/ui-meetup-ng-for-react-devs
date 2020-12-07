@@ -1,0 +1,9 @@
+<div class="root">
+  <div class="item" *ngFor="let dog of dogs; trackBy:trackByDogName">
+    <div
+      class="item-icon"
+      style="--url: url('{{dog.imageUrl}}')"
+    />
+    <div class="item-content">{{dog.name}}</div>
+  </div>
+</div>
