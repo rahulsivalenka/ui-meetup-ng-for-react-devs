@@ -45,6 +45,10 @@ const MyComp = props => {
     ]
   );
 
+  useEffect(() => {
+    // called on every re-render
+  });
+
   return <div>{/* template */}</div>;
 };
 

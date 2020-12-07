@@ -1117,3 +1117,46 @@ class ListComponent {
 </CodeSurferColumns>
 
 ---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="LifeCycle: Every-Rerender">
+
+```jsx 48:50 subtitle="useEffect without the dependency array will be called on every re-render" file=./samples/react/MyComp/MyComp1.js
+
+```
+
+```ts 67:69 subtitle="ngDoCheck will be called on every change detection run" file=./samples/ng/my-comp/my-comp-1.component.ts
+
+```
+
+</Step>
+
+<Step title="LifeCycle: Every-Rerender">
+
+```diff 48:50 subtitle="useEffect without the dependency array will be called on every re-render"
+
+```
+
+```diff 67:69 subtitle="used to detect and act upon changes that Angular can't or won't detect on its own"
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<div style={{ padding: '15%', width: '100%' }}>
+
+|    Next Up    |
+| :-----------: | ------------ |
+|     Form      | Lazy Loading |
+| HTTP Requests | Ecosystem    |
+|    Modules    |
+|    Routing    |
+
+</div>
+
+---
