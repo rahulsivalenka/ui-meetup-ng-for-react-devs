@@ -1044,7 +1044,7 @@ class ListComponent {
 
 <Step title="LifeCycle: Init">
 
-```diff 28:30 subtitle="useLayoutEffect hook with empty array is called once synchronously on init"
+```diff 32:34 subtitle="useLayoutEffect hook with empty array is called once synchronously on init"
 
 ```
 
@@ -1062,7 +1062,7 @@ class ListComponent {
 
 <Step title="LifeCycle: Changes">
 
-```jsx 16:19 subtitle="return function inside a useEffect callback is called on destroy" file=./samples/react/MyComp/MyComp1.js
+```jsx 16:19 subtitle="use useEffect hook with variable to listen the changes for in its dependency array" file=./samples/react/MyComp/MyComp1.js
 
 ```
 
