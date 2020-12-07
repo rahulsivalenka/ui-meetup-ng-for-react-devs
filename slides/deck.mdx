@@ -883,3 +883,107 @@ const App = () => {
 </Step>
 
 </CodeSurferColumns>
+
+---
+
+What if our List wants to pass the data into ListItem components?
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Passing data to children">
+
+```jsx 2[40:58] subtitle="use render function prop to pass context to children"
+const List = props => {
+  return <div>{props.items.map(item => props.render(item))}</div>;
+};
+```
+
+```ts 7 subtitle="use ngTemplateOutlet directive to pass context to children"
+import { Component, ContentChild, TemplateRef } from '@angular/core';
+
+@Component({
+  selector: 'app-list',
+  template: `
+    <div *ngFor="let item of items">
+      <ng-container *ngTemplateOutlet="template; context: dog"></ng-container>
+    </div>
+  `,
+})
+class ListComponent {
+  @ContentChild('item', { static: false })
+  template: TemplateRef<any>;
+
+  @Input() items: any[];
+}
+```
+
+</Step>
+
+<Step title="Passing data to children">
+
+```diff 2[40:58] subtitle="use render function prop to pass context to children"
+
+```
+
+```diff 7[40:48],12:13  subtitle="query for the template from content"
+
+```
+
+</Step>
+
+<Step title="Passing data to children">
+
+```diff 2[40:58] subtitle="use render function prop to pass context to children"
+
+```
+
+```diff 12[18:22]  subtitle="note the query selector here for querying template"
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Passing data to children">
+
+```jsx 2 subtitle="pass a function to render prop to get item data into the function"
+<List
+  render={item => <ListItem {...item} />}
+  items={
+    [
+      /* items here */
+    ]
+  }
+/>
+```
+
+```html 2:4 subtitle="use ng-template to extract the item context from parent"
+<app-list [items]="[/* items here */]">
+  <ng-template #item let-item="item">
+    <app-list-item [name]="item.name" imageUrl="item.imageUrl"> </app-list-item>
+  </ng-template>
+</app-list>
+```
+
+</Step>
+
+<Step title="Passing data to children">
+
+```diff 2 subtitle="pass a function to render prop to get item data into the function"
+
+```
+
+```diff 2[16:21] subtitle="remember the 'item' selector used in the parent @ContentChild() query"
+
+```
+
+</Step>
+
+</CodeSurferColumns>
