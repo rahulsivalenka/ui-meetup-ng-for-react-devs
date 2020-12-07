@@ -710,3 +710,107 @@ By Phani Rahul Sivalenka
 </Step>
 
 </CodeSurferColumns>
+
+---
+
+What if for another page we wanted the dog image to be on the right within the same list?
+
+or
+
+For the dog item to look different?
+
+---
+
+This is where component composition helps
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Component Composition" subtitle="Let's start where we left off. We want to be able to send in different list items">
+
+```jsx 22:34 file=./samples/react/List/BasicDogsListUsingFor.js
+
+```
+
+```html 2:8 file=./samples/ng/list/basic-dogs-list-using-for.component.html
+
+```
+
+</Step>
+
+<Step title="Component Composition">
+
+```jsx 4[15:27],5[40:49] subtitle="replace the items loop with children prop" file=./samples/react/List/ListWithChildren.js
+
+```
+
+```ts 7[7:32] subtitle="replace the items loop with ng-content" file=./samples/ng/list/list-with-children.ts
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Component Composition" subtitle="Extract the item into its own component">
+
+```jsx file=./samples/react/List/ListItem.js
+
+```
+
+```ts file=./samples/ng/list/list-item.ts
+
+```
+
+</Step>
+
+<Step title="Component Composition" subtitle="Use the components in a parent inside open and close tags of List component">
+
+```jsx
+<List>
+  <ListItem name="Golden Retriever" imageUrl="" />
+  <ListItem name="Husky" imageUrl="" />
+  <ListItem name="Pug" imageUrl="" />
+</List>
+```
+
+```html
+<app-list>
+  <app-list-item name="Golden Retriever" imageUrl=""></app-list-item>
+  <app-list-item name="Husky" imageUrl=""></app-list-item>
+  <app-list-item name="Pug" imageUrl=""></app-list-item>
+</app-list>
+```
+
+</Step>
+
+<Step title="Component Composition" subtitle="Can always use loops">
+
+```jsx
+<List>
+  {dogs.map(dog => (
+    <ListItem key={dog.name} name={dog.name} imageUrl={dog.imageUrl} />
+  ))}
+</List>
+```
+
+```html
+<app-list>
+  <app-list-item
+    *ngFor="let dog of dogs"
+    [name]="dog.name"
+    [imageUrl]="dog.imageUrl"
+  ></app-list-item>
+</app-list>
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
