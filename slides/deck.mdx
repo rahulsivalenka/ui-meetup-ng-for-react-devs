@@ -987,3 +987,133 @@ class ListComponent {
 </Step>
 
 </CodeSurferColumns>
+
+---
+
+# ADVANCED
+
+## Lifecycle Hooks
+
+###### not to be confused with React Hooks
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="LifeCycle: Construction">
+
+```jsx 4:11 subtitle="function itself acts as a constructor" file=./samples/react/MyComp.js
+
+```
+
+```ts 36 subtitle="has a specific constructor" file=./samples/ng/my-comp/my-comp-1.component.ts
+
+```
+
+</Step>
+
+<Step title="LifeCycle: Construction">
+
+```diff 4:11 subtitle="gets called on every re-render"
+
+```
+
+```diff 36 subtitle="only called once during component instantiation"
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="LifeCycle: Init">
+
+```jsx 6:14 subtitle="useEffect hook with an empty array gets called once after component is rendered" file=./samples/react/MyComp/MyComp1.js
+
+```
+
+```ts 71:77 subtitle="these get called after each change detection" file=./samples/ng/my-comp/my-comp-1.component.ts
+
+```
+
+</Step>
+
+<Step title="LifeCycle: Init">
+
+```diff 28:30 subtitle="useLayoutEffect hook with empty array is called once synchronously on init"
+
+```
+
+```diff 54:65 subtitle="these get called only once on init"
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="LifeCycle: Changes">
+
+```jsx 16:19 subtitle="return function inside a useEffect callback is called on destroy" file=./samples/react/MyComp/MyComp1.js
+
+```
+
+```ts 30:32,38:52 subtitle="ngOnChanges gets called once initially and on subsequent @Input() member changes" file=./samples/ng/my-comp/my-comp-1.component.ts
+
+```
+
+</Step>
+
+<Step title="LifeCycle: Changes">
+
+```diff 16:24 subtitle="act on specific prop changes separately"
+
+```
+
+```diff 39:45 subtitle="identify which input changed in ngOnChanges"
+
+```
+
+</Step>
+
+<Step title="LifeCycle: Changes">
+
+```diff 26:30 subtitle="act on multiple value changes. Note here 'count' is a component state not a prop"
+
+```
+
+```diff 47:51 subtitle="ngOnChanges only gets called on @Input() member changes but not on class member changes"
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="LifeCycle: Destroy">
+
+```jsx 39:41 subtitle="return function inside a useEffect callback is called on destroy" file=./samples/react/MyComp/MyComp1.js
+
+```
+
+```ts 79:81 subtitle="ngOnDestroy function is called on destroy" file=./samples/ng/my-comp/my-comp-1.component.ts
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---

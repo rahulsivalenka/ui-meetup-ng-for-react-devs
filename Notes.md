@@ -6,3 +6,11 @@
 - render prop -> ngTemplateOutlet + ng-template
   - List & ListItem
 - HOC -> component factory
+
+# LifeCycle Hooks
+
+- ngOnInit, ngAfterViewInit, ngAfterContentInit -> useLayoutEffect []
+- ngAfterViewChecked, ngAfterContentChecked, ng -> useEffect []
+- ngOnChanges -> useEffect [variableToListenForChanges]
+- ngOnDestroy -> useEffect with callback
+- ngDoCheck -> useEffect
