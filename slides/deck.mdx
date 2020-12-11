@@ -29,6 +29,7 @@ export const theme = themes.notes;
 UI Meetup
 
 By Phani Rahul Sivalenka
+(hit F11 for better fullscreen experience)
 
 <div class="row">
   <Link class="row-item" to="/1">
@@ -1197,7 +1198,7 @@ npm i -S axios
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
-<Step title="HTTP Package: Provide">
+<Step title="HTTP: Provide">
 
 ```js subtitle="there is no need to provide for axios"
 🤷
@@ -1210,7 +1211,7 @@ npm i -S axios
 
 </Step>
 
-<Step title="HTTP Package: Instantiate">
+<Step title="HTTP: Instantiate">
 
 ```js 1,5 subtitle="create an instance of axios" file=./samples/react/http.js
 
@@ -1222,7 +1223,7 @@ npm i -S axios
 
 </Step>
 
-<Step title="HTTP Package: Use">
+<Step title="HTTP: Use">
 
 ```diff 8 subtitle="use the instance in a service"
 
@@ -1234,7 +1235,7 @@ npm i -S axios
 
 </Step>
 
-<Step title="HTTP Package: Make the call">
+<Step title="HTTP: Make the call">
 
 ```diff 14,18:28 subtitle="make the calls inside useEffect"
 
@@ -1246,7 +1247,7 @@ npm i -S axios
 
 </Step>
 
-<Step title="HTTP Package: Make the call">
+<Step title="HTTP: Make the call">
 
 ```diff 18[25:38],19,20[23:40],23,25:26 subtitle="Promise based using async/await syntax"
 
@@ -1293,6 +1294,79 @@ npm i -S formik yup
 
 ```bash subtitle="has an in-built package"
 @angular/forms
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Form: Provide">
+
+```js subtitle="there is no need to provide for formik"
+🤷
+// Nothing here
+```
+
+```ts 2,6:10 subtitle="have to import FormsModule (template driven forms) or ReactiveFormsModule (reactive forms) in the root NgModule (i.e., AppModule)" file=./samples/ng/form.ts
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Form: Define Initial Values">
+
+```jsx 5:7 subtitle="define it as an object" file=./samples/react/form.js
+
+```
+
+```ts 39:41 subtitle="define it as an object on the component class" file=./samples/ng/form.ts
+
+```
+
+</Step>
+
+<Step title="Form: Define Validations">
+
+```diff 9:11 subtitle="define validations schema using yup"
+
+```
+
+```diff 26 subtitle="validations will be part of the template in template driven forms"
+
+```
+
+</Step>
+
+<Step title="Form: Create Form">
+
+```diff 22:28,35:37 subtitle="create the form using Formik and, bind the initial values and validation schema"
+
+```
+
+```diff 19,27,35 subtitle="create the form using ngForm directive and bind the model using ngModel"
+
+```
+
+</Step>
+
+<Step title="Form: Create Form Field">
+
+```diff 29 subtitle="create the fields needed in the template"
+
+```
+
+```diff 22:30 subtitle="create the fields needed in the template using Field component and name of the field"
+
 ```
 
 </Step>
