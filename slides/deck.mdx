@@ -1159,8 +1159,8 @@ class ListComponent {
 | :-----------: | ------------ |
 | HTTP Requests | Lazy Loading |
 |     Form      | Ecosystem    |
-|    Modules    |
 |    Routing    |
+|    Modules    |
 
 </div>
 
@@ -1405,3 +1405,43 @@ npm i -S formik yup
 - [yup](https://www.npmjs.com/package/yup)
 
 ---
+
+# ADVANCED
+
+## Routing
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Routing Package">
+
+```bash subtitle="need an external package. We use 'React Router'"
+npm i -S react-router-dom
+```
+
+```bash subtitle="has an in-built"
+@angular/router
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Routing: Provide">
+
+```jsx 19,23,27 subtitle="wrap all content with BrowserRouter to provide routing" file=./samples/react/routing.js
+
+```
+
+```ts subtitle="have to import RouterModule in the needed module" file=./samples/ng/routing.ts
+
+```
+
+</Step>
+
+</CodeSurferColumns>
