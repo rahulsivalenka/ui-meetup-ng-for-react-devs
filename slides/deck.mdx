@@ -1,17 +1,17 @@
 import { github, nightOwl, oceanicNext, vsDark } from '@code-surfer/themes';
 import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
+import { Link } from 'gatsby';
 import { Appear, themes } from 'mdx-deck';
 
 import ComparisonColumn from './components/ComparisonColumn';
 import { COLUMN_THEMES } from './components/constants';
-import { getTheme } from './components/helper';
 import Head from './components/Head';
+import { getTheme } from './components/helper';
 import ImageStack from './components/ImageStack';
 import ngStructure from './images/ng-structure.png';
 import ngStyleGuide from './images/ng-style-guide.png';
 import reactStyleGuide from './images/react-style-guide-1.png';
 import reactStyleGuide2 from './images/react-style-guide-2.png';
-
 import BasicDogsList from './samples/react/List/BasicDogsList';
 
 import './styles/overrides.css';
@@ -30,12 +30,15 @@ UI Meetup
 By Phani Rahul Sivalenka
 
 <div class="row">
-  <a class="row-item" href="/1">
+  <Link class="row-item" to="/1">
     Part 1: Basics
-  </a>
-  <a class="row-item" href="/20">
+  </Link>
+  <Link class="row-item" to="/20">
     Part 2: Advanced
-  </a>
+  </Link>
+  <Link class="row-item" to="/42">
+    Part 3: Advanced Continued
+  </Link>
 </div>
 
 ---
@@ -1152,11 +1155,106 @@ class ListComponent {
 
 |    Next Up    |
 | :-----------: | ------------ |
-|     Form      | Lazy Loading |
-| HTTP Requests | Ecosystem    |
+| HTTP Requests | Lazy Loading |
+|     Form      | Ecosystem    |
 |    Modules    |
 |    Routing    |
 
 </div>
 
 ---
+
+# Part 3: ADVANCED CONTINUED
+
+#### 14th Dec 2020
+
+---
+
+# ADVANCED
+
+## HTTP Requests
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="HTTP Package">
+
+```bash subtitle="have to install an external package. We use [Axios](https://github.com/axios/axios#features)"
+npm i -S axios
+```
+
+```bash subtitle="has an in-built package"
+@angular/common/http
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="HTTP Package: Provide">
+
+```js subtitle="there is no need to provide for axios"
+🤷
+// Nothing here
+```
+
+```ts 1[22:38],6:9 subtitle="have to import HttpClientModule in the root NgModule (i.e., AppModule)" file=./samples/ng/http.ts
+
+```
+
+</Step>
+
+<Step title="HTTP Package: Instantiate">
+
+```js 1,5 subtitle="create an instance of axios" file=./samples/react/http.js
+
+```
+
+```diff 19 subtitle="let the Angular Dependency Injection (DI) do the instantiation"
+
+```
+
+</Step>
+
+<Step title="HTTP Package: Use">
+
+```diff 8 subtitle="use the instance in a service"
+
+```
+
+```diff 22 subtitle="📋"
+
+```
+
+</Step>
+
+<Step title="HTTP Package: Make the call">
+
+```diff 14,18:28 subtitle="make the calls inside useEffect"
+
+```
+
+```diff 34,38:45 subtitle="make the calls inside ngOnInit"
+
+```
+
+</Step>
+
+<Step title="HTTP Package: Make the call">
+
+```diff 18[25:38],19,20[23:40],23,25:26 subtitle="Promise based using async/await syntax"
+
+```
+
+```diff 38[30:42],39,41:42,44:45 subtitle="RxJS Observables based"
+
+```
+
+</Step>
+
+</CodeSurferColumns>
