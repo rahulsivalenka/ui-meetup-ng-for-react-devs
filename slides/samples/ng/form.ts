@@ -28,7 +28,9 @@ export class AppModule {}
           name="name"
           #name="ngModel"
         />
-        <div [hidden]="name.valid || name.pristine">Name is required</div>
+        <div class="error" [hidden]="name.valid || name.pristine">
+          Name is required
+        </div>
       </div>
 
       <button type="submit" [disabled]="!myForm.form.valid">Submit</button>

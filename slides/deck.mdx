@@ -1329,7 +1329,7 @@ npm i -S formik yup
 
 ```
 
-```ts 39:41 subtitle="define it as an object on the component class" file=./samples/ng/form.ts
+```ts 41:43 subtitle="define it as an object on the component class" file=./samples/ng/form.ts
 
 ```
 
@@ -1353,7 +1353,7 @@ npm i -S formik yup
 
 ```
 
-```diff 19,27,35 subtitle="create the form using ngForm directive and bind the model using ngModel"
+```diff 19,27,37 subtitle="create the form using ngForm directive and bind the model using ngModel"
 
 ```
 
@@ -1361,11 +1361,35 @@ npm i -S formik yup
 
 <Step title="Form: Create Form Field">
 
-```diff 29 subtitle="create the fields needed in the template"
+```diff 29 subtitle="create the fields needed in the template using Field component and name of the field"
 
 ```
 
-```diff 22:30 subtitle="create the fields needed in the template using Field component and name of the field"
+```diff 22:30 subtitle="create the fields needed in the template"
+
+```
+
+</Step>
+
+<Step title="Form: Field Validity">
+
+```diff 27[11:26],30 subtitle="use errors and touched to check the validity of a specific field"
+
+```
+
+```diff 29[11:26],31 subtitle="use template reference of the ngModel on the field to check validity of a specific field"
+
+```
+
+</Step>
+
+<Step title="Form: Form Validity">
+
+```diff 27[42:49],32[59:67] subtitle="use isValid prop from Formik to check form validity"
+
+```
+
+```diff 19[35:51],36[41:60] subtitle="use template reference of the ngForm on the form to check form validity"
 
 ```
 
