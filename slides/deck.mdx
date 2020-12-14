@@ -1602,7 +1602,7 @@ no modules here
 
 <Step title="Lazy Loading: Route Level">
 
-```js 4:5 subtitle="mark page components to be lazy loaded using 'React.lazy()' function" file=./samples/react/lazyLoading.js
+```jsx 4:5 subtitle="mark page components to be lazy loaded using 'React.lazy()' function" file=./samples/react/lazyLoading.js
 
 ```
 
@@ -1619,6 +1619,36 @@ no modules here
 ```
 
 ```diff 28:29 subtitle="lazy load the sub module using 'loadChildren' property on route config with a root path defined for that module"
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Lazy Loading: Component Level">
+
+```jsx 3,4,9:14 subtitle="use the same 'React.lazy()' to lazy load components" file=./samples/react/compLazyLoading.js
+
+```
+
+```md subtitle="with Angular Ivy it is possible to lazy load components using 'ComponentFactoryResolver'"
+https://johnpapa.net/angular-9-lazy-loading-components/
+```
+
+</Step>
+
+<Step title="Lazy Loading: Component Level">
+
+```diff 9,14 subtitle="use 'Suspense' to give a fallback while the lazy loaded module/component is being fetched from server"
+
+```
+
+```diff subtitle="with Angular Ivy it is possible to lazy load components using 'ComponentFactoryResolver'"
 
 ```
 
