@@ -1546,7 +1546,7 @@ defining routes is a two step process
 
 # ADVANCED
 
-## Modules & Lazy Loading
+## Modules
 
 ---
 
@@ -1583,6 +1583,42 @@ no modules here
 ```
 
 ```diff 19 subtitle="import the module in another module to use the components exported"
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# ADVANCED
+
+## Lazy Loading
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Lazy Loading: Route Level">
+
+```js 4:5 subtitle="mark page components to be lazy loaded using 'React.lazy()' function" file=./samples/react/lazyLoading.js
+
+```
+
+```ts 8:17,21[27:55] subtitle="define sub modules to be lazy loaded along with its routes registered using 'forChild()'" file=./samples/ng/lazyLoading.ts
+
+```
+
+</Step>
+
+<Step title="Lazy Loading: Route Level">
+
+```diff 4:5 subtitle="mark page components to be lazy loaded using 'React.lazy()' function"
+
+```
+
+```diff 28:29 subtitle="lazy load the sub module using 'loadChildren' property on route config with a root path defined for that module"
 
 ```
 
