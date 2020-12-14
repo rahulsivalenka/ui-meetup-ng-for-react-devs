@@ -1,14 +1,29 @@
 import React from 'react';
-import { Link, Redirect, Route, Switch } from 'react-router-dom';
+import { Link, Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
+
+const PostsView = () => {
+  const { path, url } = useRouteMatch();
+
+  return (
+    <div>
+      <Link to={`${url}/details/2`}>View Post 2 Details</Link>
+
+      <Switch>
+        <Route path={`${path}/details/:postId`} component={PostDetails} />
+        <Route path={`${path}/edit/:postId`} component={EditPosts} />
+        <Route path={`${path}`} component={PostsList} />
+      </Switch>
+    </div>
+  );
+};
 
 const Pages = () => {
   return (
     <Switch>
-      <Route to="/about" component={AboutView} />
-      <Route to="/posts/edit/:postId" component={EditPostView} />
-      <Route to="/posts" component={PostsList} />
-      <Route to="/404" component={PageNotFound} />
-      <Route exact to="/" component={Home} />
+      <Route path="/about" component={AboutView} />
+      <Route path="/posts" component={PostsView} />
+      <Route path="/404" component={PageNotFoundView} />
+      <Route exact path="/" component={HomeView} />
       <Route>
         <Redirect to="/404" />
       </Route>
@@ -21,7 +36,7 @@ import { BrowserRouter } from 'react-router-dom';
 const App = () => {
   return (
     <BrowserRouter>
-      <Link path="/posts/edit/1">Edit Post 1</Link>
+      <Link to="/posts/edit/1">Edit Post 1</Link>
 
       <Pages />
     </BrowserRouter>

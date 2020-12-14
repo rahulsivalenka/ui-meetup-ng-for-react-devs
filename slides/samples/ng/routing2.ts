@@ -11,12 +11,22 @@ const routes: Routes = [
     component: AboutComponent,
   },
   {
-    path: 'posts/edit/:postId',
-    component: EditPostComponent,
-  },
-  {
     path: 'posts',
-    component: PostsListComponent,
+    component: PostsComponent,
+    children: [
+      {
+        path: 'details/:postId',
+        component: PostDetailsComponent,
+      },
+      {
+        path: 'edit/:postId',
+        component: EditPostComponent,
+      },
+      {
+        path: '',
+        component: PostsListComponent,
+      },
+    ],
   },
   {
     path: '404',

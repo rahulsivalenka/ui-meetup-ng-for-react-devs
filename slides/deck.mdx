@@ -1434,7 +1434,7 @@ npm i -S react-router-dom
 
 <Step title="Routing: Provide">
 
-```jsx 19,23,27 subtitle="wrap all the routes with BrowserRouter to provide routing" file=./samples/react/routing.js
+```jsx 34,38,42 subtitle="wrap all the routes with BrowserRouter to provide routing" file=./samples/react/routing.js
 
 ```
 
@@ -1446,7 +1446,7 @@ npm i -S react-router-dom
 
 <Step title="Routing: Provide">
 
-```diff 19,23,27 subtitle="wrap all the routes with BrowserRouter to provide routing"
+```diff 34,38,42 subtitle="wrap all the routes with BrowserRouter to provide routing"
 
 ```
 
@@ -1458,11 +1458,61 @@ npm i -S react-router-dom
 
 <Step title="Routing: Provide">
 
-```diff 19,23,27 subtitle="wrap all the routes with BrowserRouter to provide routing"
+```diff 34,38,42 subtitle="wrap all the routes with BrowserRouter to provide routing"
 
 ```
 
 ```ts 12[40:60],14[14:18] subtitle="use 'forChild()' static method for registering a child module (ChildModule) routes" file=./samples/ng/routing1.ts
+
+```
+
+</Step>
+
+<Step title="Routing: Define Routes">
+
+```diff 22:30 subtitle="define routes declaratively in JSX where the routed components need to be rendered"
+
+```
+
+```
+defining routes is a two step process
+```
+
+</Step>
+
+<Step title="Routing: Define Routes">
+
+```diff 22:30 subtitle="define routes declaratively in JSX where the routed components need to be rendered"
+
+```
+
+```ts 8:43 subtitle="1. define routes declaratively as an array of route objects" file=./samples/ng/routing2.ts
+
+```
+
+</Step>
+
+<Step title="Routing: Define Routes">
+
+```diff 22:30 subtitle="define routes declaratively in JSX where the routed components need to be rendered"
+
+```
+
+```html 2 subtitle="2. use a 'router-outlet' to indicate where the routed components should be rendered in the template"
+<div>
+  <router-outlet></router-outlet>
+</div>
+```
+
+</Step>
+
+<Step title="Routing: Define Child Routes">
+
+```diff 5,11:16 subtitle="define child routes in a child component's JSX where those routes need to be rendered"
+
+```
+
+```ts 16:29 subtitle="define child routes using 'children' property in route definition" file=./samples/ng/routing2.ts
 
 ```
 
