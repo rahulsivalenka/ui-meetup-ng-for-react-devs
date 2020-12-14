@@ -59,7 +59,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step>
+
 
 ```jsx 4:11 subtitle="define it as a function" file=./samples/react/MyComp.js
 
@@ -71,7 +73,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step>
+
 
 ```diff 5:9 subtitle="template lives inside the component definition and cannot be externalized"
 
@@ -83,7 +87,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step>
+
 
 ```diff 5:9 subtitle="template lives inside the component definition and cannot be externalized"
 
@@ -95,31 +101,41 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Syntax">
 
+
 <ComparisonColumn>
+
 
 - Language : JavaScript / [TypeScript](https://www.typescriptlang.org/)
 - Template Syntax : [JSX](https://reactjs.org/docs/introducing-jsx.html)
 
 </ComparisonColumn>
 
+
 <ComparisonColumn fw="ng">
+
 
 - Language : [TypeScript](https://www.typescriptlang.org/)
 - Template Syntax : [Extended HTML](https://angular.io/guide/template-syntax)
 
 </ComparisonColumn>
 
+
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -131,7 +147,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Usage">
+
 
 ```jsx 4[7:13] subtitle="use the component name as element. (should be in PascalCase)" file=./samples/react/MyComp.js
 
@@ -143,7 +161,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Usage">
+
 
 ```jsx subtitle="use the component name as element. (should be in PascalCase)"
 <MyComp />;
@@ -159,7 +179,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -171,7 +193,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Styling">
+
 
 ```jsx 2 subtitle="import an external CSS file (styles leak here)" file=./samples/react/MyComp.js
 
@@ -183,7 +207,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Styling">
+
 
 ```jsx 2 subtitle="import an external CSS file (styles leak here)" file=./samples/react/MyComp.js
 
@@ -195,7 +221,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Styling: In the same file">
+
 
 ```jsx 6:8 subtitle="define inline using CSS-in-JS" file=./samples/react/MyCompInline.js
 
@@ -207,15 +235,20 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Styling: More Options">
 
+
 <ComparisonColumn>
+
 
 - [CSS Modules (available in Create React App (CRA) by default)](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
 - [Styled Components](https://styled-components.com/)
@@ -224,7 +257,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </ComparisonColumn>
 
+
 <ComparisonColumn fw="ng">
+
 
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [SCSS/SASS](https://sass-lang.com/)
@@ -233,9 +268,12 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </ComparisonColumn>
 
+
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -247,7 +285,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Inputs">
+
 
 ```jsx 3[16:21],4[11:15] subtitle="use 'props' for inputs" file=./samples/react/MyCompWithoutPropsDestructuring.js
 
@@ -259,7 +299,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Inputs">
+
 
 ```diff 4 subtitle="note that 'props' here is an object from which we are extracting our inputs"
 
@@ -271,7 +313,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Inputs">
+
 
 ```jsx 3[19:23] subtitle="can also be direclty destructured" file=./samples/react/MyComp/MyComp.js
 
@@ -283,7 +327,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Inputs">
+
 
 ```jsx 3:4,8[42:46] subtitle="in TypeScript prop types are defined as interfaces separately" file=./samples/react/MyComp/MyComp.tsx
 
@@ -295,7 +341,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Inputs">
+
 
 ```diff 8[15:36] subtitle="and use that type in the component"
 
@@ -307,7 +355,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Inputs: Binding">
+
 
 ```jsx 43[14:20] subtitle="bind in JSX using curly braces ({...})" file=./samples/react/MyComp/MyComp.js
 
@@ -319,7 +369,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Inputs: Usage">
+
 
 ```jsx 1[9:24] subtitle="'Batman' string value is assigned to 'name' prop using curly braces ({})"
 <MyComp name={'Batman'} />
@@ -332,13 +384,17 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Outputs">
+
 
 ```jsx 3[25:37] subtitle="use 'prop functions' for outputs" file=./samples/react/MyComp/MyComp.js
 
@@ -350,7 +406,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Outputs: Raising the event">
+
 
 ```jsx 30 subtitle="call it as any other JS function call" file=./samples/react/MyComp/MyComp.js
 
@@ -362,7 +420,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Outputs: Usage">
+
 
 ```jsx 3
 <MyComp
@@ -380,7 +440,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -392,7 +454,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Component State">
+
 
 ```jsx 4 subtitle="define it using a special 'useState' hook which gives the current value of state (count) and a setter function (setCount)" file=./samples/react/MyComp/MyComp.js
 
@@ -404,7 +468,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Component State: Changing the state">
+
 
 ```jsx 34:38 subtitle="call the setter function that is destructured out of useState call" file=./samples/react/MyComp/MyComp.js
 
@@ -416,7 +482,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -426,29 +494,39 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Communication Between Unrelated Components">
 
+
 <ComparisonColumn>
+
 
 ## React Context
 
 </ComparisonColumn>
 
+
 <ComparisonColumn fw="ng">
+
 
 ## Angular Services
 
 </ComparisonColumn>
 
+
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Communication Between Unrelated Components">
+
 
 ```jsx subtitle="define the context" file=./samples/react/CartProvider.js
 
@@ -460,7 +538,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Communication Between Unrelated Components">
+
 
 ```diff subtitle="there are three parts to a context definition"
 
@@ -472,7 +552,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Communication Between Unrelated Components">
+
 
 ```diff 3 subtitle="1. create the context"
 
@@ -484,7 +566,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Communication Between Unrelated Components">
+
 
 ```diff 5:15 subtitle="2. create the corresponding provider"
 
@@ -496,7 +580,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Communication Between Unrelated Components">
+
 
 ```diff 17 subtitle="3. expose a custom hook to be used to access the values in the context"
 
@@ -508,13 +594,17 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Usage: Provide It">
+
 
 ```jsx 6:8 subtitle="provide the context in the root or in any other component" file=./samples/react/UsingContext.js
 
@@ -526,7 +616,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Usage: Inject It">
+
 
 ```diff 13 subtitle="access context using the custom hook exposed"
 
@@ -538,7 +630,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Usage: Use It">
+
 
 ```diff 15 subtitle="use the members in context"
 
@@ -550,21 +644,25 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <div style={{ padding: '15%', width: '100%' }}>
 
+
 |        Next Up        |
-| :-------------------: | :-----------: |
-| Component Composition |     Form      |
+| :-------------------: |
+| Component Composition | Form |
 |    Lifecycle Hooks    | HTTP Requests |
-|        Modules        |   Ecosystem   |
+|        Modules        | Ecosystem |
 |        Routing        |
 |     Lazy Loading      |
 
 </div>
+
 
 ---
 
@@ -582,25 +680,33 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 <CodeSurferColumns>
 
+
 <Step>
+
 
 <BasicDogsList />
 
 </Step>
+
 
 <Step subtitle="How do we build this?">
 
+
 <BasicDogsList />
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step subtitle="One way is to define all in one component">
+
 
 ```jsx file=./samples/react/List/BasicDogsList.js
 
@@ -612,7 +718,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step subtitle="Notice the repetitions">
+
 
 ```diff 7:15
 
@@ -624,13 +732,17 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Extract dogs into an array">
+
 
 ```jsx 5:18 subtitle="define dogs constant in the component function" file=./samples/react/List/BasicDogsListUsingFor.js
 
@@ -642,7 +754,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Simplify the code using loop">
+
 
 ```jsx 22:34 subtitle="Using Array.prototype.map() function" file=./samples/react/List/BasicDogsListUsingFor.js
 
@@ -654,13 +768,17 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Don't miss the key in React">
+
 
 ```jsx 24[41:55] subtitle="notice the key prop"  file=./samples/react/List/BasicDogsListUsingFor.js
 
@@ -672,7 +790,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Don't miss the key in React">
+
 
 ```jsx 24[41:55] subtitle="Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity. Refer: https://reactjs.org/docs/lists-and-keys.html"  file=./samples/react/List/BasicDogsListUsingFor.js
 
@@ -684,13 +804,17 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Can do in Angular too">
+
 
 ```jsx 24[41:55] file=./samples/react/List/BasicDogsListUsingFor.js
 
@@ -702,7 +826,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 <Step title="Can do in Angular too">
+
 
 ```jsx 24[41:55] file=./samples/react/List/BasicDogsListUsingFor.js
 
@@ -714,7 +840,9 @@ By Phani Rahul Sivalenka, reviewed/edited by Steven
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -732,7 +860,9 @@ This is where component composition helps
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Component Composition" subtitle="Let's start where we left off. We want to be able to send in different list items">
+
 
 ```jsx 22:34 file=./samples/react/List/BasicDogsListUsingFor.js
 
@@ -744,7 +874,9 @@ This is where component composition helps
 
 </Step>
 
+
 <Step title="Component Composition">
+
 
 ```jsx 4[15:27],5[40:49] subtitle="replace the items loop with children prop" file=./samples/react/List/ListWithChildren.js
 
@@ -756,13 +888,17 @@ This is where component composition helps
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Component Composition" subtitle="Extract the item into its own component">
+
 
 ```jsx file=./samples/react/List/ListItem.js
 
@@ -774,7 +910,9 @@ This is where component composition helps
 
 </Step>
 
+
 <Step title="Component Composition" subtitle="Use the components in a parent inside open and close tags of List component">
+
 
 ```jsx
 <List>
@@ -794,7 +932,9 @@ This is where component composition helps
 
 </Step>
 
+
 <Step title="Component Composition" subtitle="Can always use loops">
+
 
 ```jsx
 <List>
@@ -816,13 +956,17 @@ This is where component composition helps
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Component Composition: Multiple Children">
+
 
 ```jsx 4[39:51],5[40:52],11[21:57] subtitle="any prop can be given a valid JSX and used same as children prop"
 const SplitPane = props => {
@@ -860,7 +1004,9 @@ const App = () => {
 
 </Step>
 
+
 <Step title="Component Composition: Multiple Children">
+
 
 ```diff 4[39:51],5[40:52],11[21:57] subtitle="any prop can be given a valid JSX and used same as children prop"
 
@@ -887,7 +1033,9 @@ const App = () => {
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -897,7 +1045,9 @@ What if our List wants to pass the data into ListItem components?
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Passing data to children">
+
 
 ```jsx 2[40:58] subtitle="use render function prop to pass context to children"
 const List = props => {
@@ -926,7 +1076,9 @@ class ListComponent {
 
 </Step>
 
+
 <Step title="Passing data to children">
+
 
 ```diff 2[40:58] subtitle="use render function prop to pass context to children"
 
@@ -938,7 +1090,9 @@ class ListComponent {
 
 </Step>
 
+
 <Step title="Passing data to children">
+
 
 ```diff 2[40:58] subtitle="use render function prop to pass context to children"
 
@@ -950,13 +1104,17 @@ class ListComponent {
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Passing data to children">
+
 
 ```jsx 2 subtitle="pass a function to render prop to get item data into the function"
 <List
@@ -979,7 +1137,9 @@ class ListComponent {
 
 </Step>
 
+
 <Step title="Passing data to children">
+
 
 ```diff 2 subtitle="pass a function to render prop to get item data into the function"
 
@@ -991,7 +1151,9 @@ class ListComponent {
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -1005,7 +1167,9 @@ class ListComponent {
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="LifeCycle: Construction">
+
 
 ```jsx 4:11 subtitle="function itself acts as a constructor" file=./samples/react/MyComp.js
 
@@ -1017,7 +1181,9 @@ class ListComponent {
 
 </Step>
 
+
 <Step title="LifeCycle: Construction">
+
 
 ```diff 4:11 subtitle="gets called on every re-render"
 
@@ -1029,13 +1195,17 @@ class ListComponent {
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="LifeCycle: Init">
+
 
 ```jsx 6:14 subtitle="useEffect hook with an empty array gets called once after component is rendered" file=./samples/react/MyComp/MyComp1.js
 
@@ -1047,7 +1217,9 @@ class ListComponent {
 
 </Step>
 
+
 <Step title="LifeCycle: Init">
+
 
 ```diff 32:34 subtitle="useLayoutEffect hook with empty array is called once synchronously on init"
 
@@ -1059,13 +1231,17 @@ class ListComponent {
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="LifeCycle: Changes">
+
 
 ```jsx 16:19 subtitle="use useEffect hook with variable to listen the changes for in its dependency array" file=./samples/react/MyComp/MyComp1.js
 
@@ -1077,7 +1253,9 @@ class ListComponent {
 
 </Step>
 
+
 <Step title="LifeCycle: Changes">
+
 
 ```diff 16:24 subtitle="act on specific prop changes separately"
 
@@ -1089,7 +1267,9 @@ class ListComponent {
 
 </Step>
 
+
 <Step title="LifeCycle: Changes">
+
 
 ```diff 26:30 subtitle="act on multiple value changes. Note here 'count' is a component state not a prop"
 
@@ -1101,13 +1281,17 @@ class ListComponent {
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="LifeCycle: Destroy">
+
 
 ```jsx 39:41 subtitle="return function inside a useEffect callback is called on destroy" file=./samples/react/MyComp/MyComp1.js
 
@@ -1119,13 +1303,17 @@ class ListComponent {
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="LifeCycle: Every-Rerender">
+
 
 ```jsx 48:50 subtitle="useEffect without the dependency array will be called on every re-render" file=./samples/react/MyComp/MyComp1.js
 
@@ -1137,7 +1325,9 @@ class ListComponent {
 
 </Step>
 
+
 <Step title="LifeCycle: Every-Rerender">
+
 
 ```diff 48:50 subtitle="useEffect without the dependency array will be called on every re-render"
 
@@ -1149,20 +1339,24 @@ class ListComponent {
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <div style={{ padding: '15%', width: '100%' }}>
 
+
 |    Next Up    |
-| :-----------: | ------------ |
+| :-----------: |
 | HTTP Requests | Lazy Loading |
-|     Form      | Ecosystem    |
+|     Form      | Ecosystem |
 |    Routing    |
 |    Modules    |
 
 </div>
+
 
 ---
 
@@ -1180,7 +1374,9 @@ class ListComponent {
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="HTTP Package">
+
 
 ```bash subtitle="need an external package. We use 'Axios'"
 npm i -S axios
@@ -1192,13 +1388,17 @@ npm i -S axios
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="HTTP: Provide">
+
 
 ```js subtitle="there is no need to provide for axios"
 🤷
@@ -1211,7 +1411,9 @@ npm i -S axios
 
 </Step>
 
+
 <Step title="HTTP: Instantiate">
+
 
 ```js 1,5 subtitle="create an instance of axios" file=./samples/react/http.js
 
@@ -1223,7 +1425,9 @@ npm i -S axios
 
 </Step>
 
+
 <Step title="HTTP: Use">
+
 
 ```diff 8 subtitle="use the instance in a service"
 
@@ -1235,7 +1439,9 @@ npm i -S axios
 
 </Step>
 
+
 <Step title="HTTP: Make the call">
+
 
 ```diff 14,18:28 subtitle="make the calls inside useEffect"
 
@@ -1247,7 +1453,9 @@ npm i -S axios
 
 </Step>
 
+
 <Step title="HTTP: Make the call">
+
 
 ```diff 18[25:38],19,20[23:40],23,25:26 subtitle="Promise based using async/await syntax"
 
@@ -1259,7 +1467,9 @@ npm i -S axios
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -1286,7 +1496,9 @@ Can't mark `useEffect` callback function with `async` direclty. Refer:
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Form Package">
+
 
 ```bash subtitle="needs external packages. We use 'Formik' for forms and 'yup' for validations"
 npm i -S formik yup
@@ -1298,13 +1510,17 @@ npm i -S formik yup
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Form: Provide">
+
 
 ```js subtitle="there is no need to provide for formik"
 🤷
@@ -1317,13 +1533,17 @@ npm i -S formik yup
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Form: Define Initial Values">
+
 
 ```jsx 5:7 subtitle="define it as an object" file=./samples/react/form.js
 
@@ -1335,7 +1555,9 @@ npm i -S formik yup
 
 </Step>
 
+
 <Step title="Form: Define Validations">
+
 
 ```diff 9:11 subtitle="define validations schema using yup"
 
@@ -1347,7 +1569,9 @@ npm i -S formik yup
 
 </Step>
 
+
 <Step title="Form: Create Form">
+
 
 ```diff 22:28,35:37 subtitle="create the form using Formik and, bind the initial values and validation schema"
 
@@ -1359,7 +1583,9 @@ npm i -S formik yup
 
 </Step>
 
+
 <Step title="Form: Create Form Field">
+
 
 ```diff 29 subtitle="create the fields needed in the template using Field component and name of the field"
 
@@ -1371,7 +1597,9 @@ npm i -S formik yup
 
 </Step>
 
+
 <Step title="Form: Field Validity">
+
 
 ```diff 27[11:26],30 subtitle="use errors and touched to check the validity of a specific field"
 
@@ -1383,7 +1611,9 @@ npm i -S formik yup
 
 </Step>
 
+
 <Step title="Form: Form Validity">
+
 
 ```diff 27[42:49],32[59:67] subtitle="use isValid prop from Formik to check form validity"
 
@@ -1395,7 +1625,9 @@ npm i -S formik yup
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -1414,7 +1646,9 @@ npm i -S formik yup
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Routing Package">
+
 
 ```bash subtitle="need an external package. We use 'React Router'"
 npm i -S react-router-dom
@@ -1426,13 +1660,17 @@ npm i -S react-router-dom
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Routing: Provide">
+
 
 ```jsx 34,38,42 subtitle="wrap all the routes with BrowserRouter to provide routing" file=./samples/react/routing.js
 
@@ -1444,7 +1682,9 @@ npm i -S react-router-dom
 
 </Step>
 
+
 <Step title="Routing: Provide">
+
 
 ```diff 34,38,42 subtitle="wrap all the routes with BrowserRouter to provide routing"
 
@@ -1456,7 +1696,9 @@ npm i -S react-router-dom
 
 </Step>
 
+
 <Step title="Routing: Provide">
+
 
 ```diff 34,38,42 subtitle="wrap all the routes with BrowserRouter to provide routing"
 
@@ -1468,7 +1710,9 @@ npm i -S react-router-dom
 
 </Step>
 
+
 <Step title="Routing: Define Routes">
+
 
 ```diff 22:30 subtitle="define routes declaratively in JSX where the routed components need to be rendered"
 
@@ -1480,7 +1724,9 @@ defining routes is a two step process
 
 </Step>
 
+
 <Step title="Routing: Define Routes">
+
 
 ```diff 22:30 subtitle="define routes declaratively in JSX where the routed components need to be rendered"
 
@@ -1492,7 +1738,9 @@ defining routes is a two step process
 
 </Step>
 
+
 <Step title="Routing: Define Routes">
+
 
 ```diff 22:30 subtitle="define routes declaratively in JSX where the routed components need to be rendered"
 
@@ -1506,7 +1754,9 @@ defining routes is a two step process
 
 </Step>
 
+
 <Step title="Routing: Define Child Routes">
+
 
 ```diff 5,11:16 subtitle="define child routes in a child component's JSX where those routes need to be rendered"
 
@@ -1518,29 +1768,39 @@ defining routes is a two step process
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns>
 
+
 <Step title="Routing: Route Parmeters">
 
-<div>
-
-[testReact](http://localhost)
-
-</div>
 
 <div>
 
-[testNg](http://localhost)
+
+[React Routing with Hooks](https://dev.to/finallynero/hooks-introduced-in-react-router-v5-1-7g8#:~:text=write%20our%20routes.-,useParams,props%20passed%20to%20the%20component.)
 
 </div>
+
+
+<div>
+
+
+[Angular Route Parameters](https://www.tektutorialshub.com/angular/angular-passing-parameters-to-route/)
+
+</div>
+
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -1552,7 +1812,9 @@ defining routes is a two step process
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Modules: Define">
+
 
 ```bash
 no modules here
@@ -1564,7 +1826,9 @@ no modules here
 
 </Step>
 
+
 <Step title="Modules: Export Needed Components">
+
 
 ```bash
 no modules here
@@ -1576,7 +1840,9 @@ no modules here
 
 </Step>
 
+
 <Step title="Modules: Import In Another Module">
+
 
 ```bash
 no modules here
@@ -1588,7 +1854,9 @@ no modules here
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -1600,7 +1868,9 @@ no modules here
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Lazy Loading: Route Level">
+
 
 ```jsx 4:5 subtitle="mark page components to be lazy loaded using 'React.lazy()' function" file=./samples/react/lazyLoading.js
 
@@ -1612,7 +1882,9 @@ no modules here
 
 </Step>
 
+
 <Step title="Lazy Loading: Route Level">
+
 
 ```diff 4:5 subtitle="mark page components to be lazy loaded using 'React.lazy()' function"
 
@@ -1624,13 +1896,17 @@ no modules here
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
 <CodeSurferColumns themes={COLUMN_THEMES}>
 
+
 <Step title="Lazy Loading: Component Level">
+
 
 ```jsx 3,4,9:14 subtitle="use the same 'React.lazy()' to lazy load components" file=./samples/react/compLazyLoading.js
 
@@ -1642,7 +1918,9 @@ https://johnpapa.net/angular-9-lazy-loading-components/
 
 </Step>
 
+
 <Step title="Lazy Loading: Component Level">
+
 
 ```diff 9,14 subtitle="use 'Suspense' to give a fallback while the lazy loaded module/component is being fetched from server"
 
@@ -1654,7 +1932,9 @@ https://johnpapa.net/angular-9-lazy-loading-components/
 
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
@@ -1664,57 +1944,78 @@ https://johnpapa.net/angular-9-lazy-loading-components/
 
 <CodeSurferColumns>
 
+
 <Step title="CLI">
 
+
 <ComparisonColumn>
+
 
 [CRA React-Scripts: Not Fully Featured CLI](https://www.npmjs.com/package/react-scripts)
 
 </ComparisonColumn>
 
+
 <ComparisonColumn fw="ng">
+
 
 [Angular CLI](https://cli.angular.io/)
 
 </ComparisonColumn>
 
+
 </Step>
+
 
 <Step title="Testing">
 
+
 <ComparisonColumn>
+
 
 Testing with [Jest](https://jestjs.io/en/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 </ComparisonColumn>
 
+
 <ComparisonColumn fw="ng">
+
 
 Testing with @angular/core/testing + [Jasmine](https://jasmine.github.io/) + [Karma](https://karma-runner.github.io/latest/index.html)
 
 </ComparisonColumn>
 
+
 </Step>
+
 
 <Step title="Material Component Libraries">
 
+
 <ComparisonColumn>
+
 
 [Material UI](https://material-ui.com/)
 
 </ComparisonColumn>
 
+
 <ComparisonColumn fw="ng">
+
 
 [Angular Material](https://material.angular.io/)
 
 </ComparisonColumn>
 
+
 </Step>
+
 
 <Step title="State Management">
 
+
 <ComparisonColumn>
+
 
 - [RxJS Subjects](https://www.telerik.com/blogs/managing-state-using-rxjs-subjects-in-angular-applications)
 - [MobX](https://mobx.js.org/README.html)
@@ -1723,7 +2024,9 @@ Testing with @angular/core/testing + [Jasmine](https://jasmine.github.io/) + [Ka
 
 </ComparisonColumn>
 
+
 <ComparisonColumn fw="ng">
+
 
 - [Using React Context](https://kentcdodds.com/blog/application-state-management-with-react)
 - [NgRx](https://ngrx.io/)
@@ -1731,9 +2034,12 @@ Testing with @angular/core/testing + [Jasmine](https://jasmine.github.io/) + [Ka
 
 </ComparisonColumn>
 
+
 </Step>
 
+
 </CodeSurferColumns>
+
 
 ---
 
