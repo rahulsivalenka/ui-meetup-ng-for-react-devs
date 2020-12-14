@@ -5,3 +5,11 @@
 .row .row-item:not(:last-child) {
   margin-right: 24px;
 }
+
+.credits {
+  font-size: 0.5em;
+}
+
+.credits p {
+  margin: 0;
+}
