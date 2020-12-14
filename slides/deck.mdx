@@ -1474,7 +1474,7 @@ npm i -S react-router-dom
 
 ```
 
-```
+```bash
 defining routes is a two step process
 ```
 
@@ -1513,6 +1513,76 @@ defining routes is a two step process
 ```
 
 ```ts 16:29 subtitle="define child routes using 'children' property in route definition" file=./samples/ng/routing2.ts
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns>
+
+<Step title="Routing: Route Parmeters">
+
+<div>
+
+[testReact](http://localhost)
+
+</div>
+
+<div>
+
+[testNg](http://localhost)
+
+</div>
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# ADVANCED
+
+## Modules & Lazy Loading
+
+---
+
+<CodeSurferColumns themes={COLUMN_THEMES}>
+
+<Step title="Modules: Define">
+
+```bash
+no modules here
+```
+
+```ts 7:12 subtitle="define sub modules using @NgModule() decorator" file=./samples/ng/modules.ts
+
+```
+
+</Step>
+
+<Step title="Modules: Export Needed Components">
+
+```bash
+no modules here
+```
+
+```diff 9 subtitle="explicitly export the components that can be used in an external module"
+
+```
+
+</Step>
+
+<Step title="Modules: Import In Another Module">
+
+```bash
+no modules here
+```
+
+```diff 19 subtitle="import the module in another module to use the components exported"
 
 ```
 
